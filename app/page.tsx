@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="w-full">
       <Hero />
-      <div className="flex flex-col gap-24 my-16 w-screen">
+      <div className="flex flex-col gap-24 mt-16 mb-24 w-screen">
         <SubHero />
         <PartnerClient />
         <Products />

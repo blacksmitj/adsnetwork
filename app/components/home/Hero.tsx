@@ -4,7 +4,7 @@ import Button from "../Button";
 const Hero = () => {
   return (
     <div className="bg-gradient-to-tr from-biru to-pink h-fit">
-      <div className="flex lg:flex-row flex-col-reverse lg:items-center h-full md:px-16 px-8 max-w-[1440px] mx-auto pb-24 md:pt-40 pt-24 gap-8">
+      <div className="flex lg:flex-row flex-col-reverse lg:items-center h-full md:px-16 px-8 max-w-[1200px] mx-auto pb-24 md:pt-40 pt-24 gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="text-white font-extrabold md:text-7xl text-5xl">
             Internet For Better Life

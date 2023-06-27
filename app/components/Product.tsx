@@ -42,7 +42,6 @@ const Product: React.FC<ProductProps> = ({
       </div>
       <div
         className={`h-[150px] justify-end relative overflow-hidden
-          ${featured ? "bg-biru" : "bg-oren"}
       `}
       >
         <h1 className="absolute bottom-0 font-bold text-2xl p-6 text-white">

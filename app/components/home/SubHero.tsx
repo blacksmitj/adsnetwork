@@ -12,11 +12,11 @@ const SubHero = () => {
             alt="person-02"
             height={507}
             width={266}
-            className="object-contain md:w-[266px] w-[120px]"
+            className="object-contain md:w-[266px] w-[160px] z-[3]"
             src="/images/people-02.png"
           />
-          <div className="absolute h-[130px] md:h-[350px] mr-[10px] bg-gradient-to-tr from-biru to-pink rounded-full aspect-square -z-[1]"></div>
-          <div className="absolute mb-[100px] ml-[10px] h-[130px] md:h-[350px] bg-gradient-to-tr from-oren to-kuning rounded-full aspect-square -z-[2]"></div>
+          <div className="absolute h-[200px] md:h-[350px] mr-[10px] bg-gradient-to-tr from-biru to-pink rounded-full aspect-square z-[1]"></div>
+          <div className="absolute mb-[100px] ml-[10px] h-[200px] md:h-[350px] bg-gradient-to-tr from-oren to-kuning rounded-full aspect-square z-[2]"></div>
         </div>
         <div className="md:px-8 lg:px-16 px-2">
           <Heading
