@@ -1,11 +1,12 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import MenuItem from "./MenuItem";
 
 const UserMenu = () => {
+  const pathname = usePathname();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,14 +26,27 @@ const UserMenu = () => {
         <div className="flex flex-row items-center gap-6">
           <button
             onClick={() => router.push("/services")}
-            className="hidden md:block text-xs font-semibold text-white hover:text-oren cursor-pointer transition border-b-[2px] border-oren py-1"
+            className={`hidden md:block text-xs font-semibold text-white hover:text-oren cursor-pointer transition py-1
+            ${pathname === "/services" ? "border-b-[2px] border-oren" : ""}
+            `}
           >
             PRODUK & LAYANAN
           </button>
-          <button className="hidden md:block text-xs font-semibold text-white hover:text-oren cursor-pointer transition py-1">
+          <button
+            onClick={() => router.push("/partners")}
+            className={`hidden md:block text-xs font-semibold text-white hover:text-oren cursor-pointer transition py-1
+            ${pathname === "/partners" ? "border-b-[2px] border-oren" : ""}
+            `}
+          >
             PARTNER & CLIENT
           </button>
-          <button className="hidden md:block text-xs font-semibold text-white hover:text-oren cursor-pointer transition">
+          <button
+            onClick={() => router.push("/contact")}
+            className={`hidden md:block text-xs font-semibold text-white hover:text-oren cursor-pointer transition
+            ${pathname === "/contact" ? "border-b-[2px] border-oren" : ""}
+          
+          `}
+          >
             KONTAK
           </button>
           <button
@@ -56,7 +70,10 @@ const UserMenu = () => {
               onClick={() => router.push("/services")}
               label="PRODUK & LAYANAN"
             />
-            <MenuItem onClick={() => {}} label="PARTNER & CLIENT" />
+            <MenuItem
+              onClick={() => router.push("/partners")}
+              label="PARTNER & CLIENT"
+            />
             <MenuItem onClick={() => {}} label="KONTAK" />
           </div>
         </div>

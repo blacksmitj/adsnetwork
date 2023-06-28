@@ -10,12 +10,12 @@ const ServicesClient = () => {
   const services = getServices();
 
   return (
-    <div>
-      <Breadcumbs levelOne="Layanan" />
+    <>
+      <Breadcumbs levelOne="Produk & Layanan" />
       <div className="flex flex-col gap-24 mt-16 mb-24 max-w-[1200px] mx-auto">
         <div className="md:px-8 lg:px-16 px-4 lg:w-3/4 w-4/5">
           <Heading
-            title="Gabung Bersama Kami Untuk Menemukan solusi Internet Anda"
+            title="Gabung Bersama Kami Untuk Menemukan Solusi Internet Anda"
             subtitle="Internet Broadband untuk menghubungkan Komputer, Ponsel dan Perangkat lain di rumah Anda"
           />
         </div>
@@ -34,7 +34,7 @@ const ServicesClient = () => {
         </div>
         <Products />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import { AiOutlineCode, AiOutlineDatabase } from "react-icons/ai";
-import { BsBroadcast, BsCameraVideo, BsFillWebcamFill, BsSpeedometer2 } from "react-icons/bs";
+import { BsBroadcast, BsFillWebcamFill, BsSpeedometer2 } from "react-icons/bs";
 
 export const services = [
   {
