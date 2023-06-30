@@ -11,7 +11,7 @@ const Heading: React.FC<HeadingProps> = ({ title, subtitle }) => {
           {title}
         </h1>
         <span
-          className={`h-3 bg-gradient-to-tr from-oren to-kuning rounded-full w-full`}
+          className={`h-2 bg-gradient-to-tr from-oren to-kuning rounded-full w-full`}
         ></span>
       </div>
       {subtitle && (

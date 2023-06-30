@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <div className="bg-white py-24 px-8">
       <Container>
-        <div className="flex md:flex-row flex-col gap-16">
-          <div className="flex-1 flex flex-col gap-8 pr-14">
+        <div className="flex md:flex-row flex-col lg:gap-16 gap-12">
+          <div className="flex-1 flex flex-col gap-8 lg:pr-14 md:pr-6">
             <Image
               alt="Logo"
               className="block"
@@ -15,7 +15,7 @@ const Footer = () => {
               width="160"
               src="/images/ads-logo.png"
             />
-            <p className="text-hitam leading-relaxed md:text-lg font-light">
+            <p className="text-hitam leading-relaxed md:text-base text-sm font-light">
               PT. Adhelin Data Solution dengan Branding ADSnet merupakan suatu
               perusahaan yang berasaskan Teamwork yang didukung para personel
               yang berpengalaman dalam berbagai development.

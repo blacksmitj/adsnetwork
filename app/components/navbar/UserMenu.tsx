@@ -74,7 +74,7 @@ const UserMenu = () => {
               onClick={() => router.push("/partners")}
               label="PARTNER & CLIENT"
             />
-            <MenuItem onClick={() => {}} label="KONTAK" />
+            <MenuItem onClick={() => router.push("/contact")} label="KONTAK" />
           </div>
         </div>
         {/* )} */}

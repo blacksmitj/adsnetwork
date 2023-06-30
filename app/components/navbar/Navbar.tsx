@@ -3,10 +3,11 @@
 import Container from "../Container";
 import Logo from "./Logo";
 import UserMenu from "./UserMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isChange, setIsChange] = useState(false);
+
   const changeColor = () => {
     if (window.scrollY >= 200) {
       setIsChange(true);
@@ -15,10 +16,12 @@ const Navbar = () => {
     }
   };
 
-  if (typeof window !== "undefined") {
-    // Client-side-only code
-    window.addEventListener("scroll", changeColor);
-  }
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Client-side-only code
+      window.addEventListener("scroll", changeColor);
+    }
+  }, [isChange]);
 
   return (
     <div

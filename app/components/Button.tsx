@@ -2,11 +2,13 @@ interface ButtonProps {
   label: string;
   outline?: boolean;
   full?: boolean;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, outline, full }) => {
+const Button: React.FC<ButtonProps> = ({ label, outline, full, onClick }) => {
   return (
     <button
+      onClick={onClick}
       className={`px-4 py-3 font-semibold rounded-md duration-300
       ${full ? "w-full" : "w-fit"}
       ${
