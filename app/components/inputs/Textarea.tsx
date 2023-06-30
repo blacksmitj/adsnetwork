@@ -41,7 +41,7 @@ const Textarea: React.FC<TextareaProps> = ({
               message: "Pesan minimal 20 Character",
             },
           })}
-          className={`bg-white w-full block rounded-md py-2 px-4 text-sm font-medium border-[2px] text-biru
+          className={`bg-white w-full block rounded-md py-2 px-4 text-sm font-medium border-[2px] text-biru disabled:bg-biru/20 disabled:text-biru/50
           ${
             errors[id]
               ? "border-oren focus:outline-oren"

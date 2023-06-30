@@ -54,7 +54,7 @@ const Input: React.FC<InputProps> = ({
           disabled={disabled}
           {...register(id, validationProps)}
           type={type}
-          className={`bg-white w-full block rounded-md py-2 px-4 text-sm font-medium border-[2px] text-biru
+          className={`bg-white w-full block rounded-md py-2 px-4 text-sm font-medium border-[2px] text-biru disabled:bg-biru/20 disabled:text-biru/50
           ${
             errors[id]
               ? "border-oren focus:outline-oren"

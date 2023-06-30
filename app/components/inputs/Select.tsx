@@ -32,11 +32,11 @@ const Select: React.FC<SelectProps> = ({
           disabled={disabled}
           {...register(id, {
             required: {
-              value: true,
+              value: required || false,
               message: "Pilih subject pesan",
             },
           })}
-          className={`bg-white w-full block rounded-md py-2 px-4 text-sm font-medium border-[2px] text-biru
+          className={`bg-white w-full block rounded-md py-2 px-4 text-sm font-medium border-[2px] text-biru disabled:bg-biru/20 disabled:text-biru/50
           ${
             errors[id]
               ? "border-oren focus:outline-oren"
@@ -44,9 +44,7 @@ const Select: React.FC<SelectProps> = ({
           }
           `}
         >
-          <option selected value="">
-            {placeholder}
-          </option>
+          <option value="">{placeholder}</option>
           <option value="Internet Broadband">Internet Broadband</option>
           <option value="Internet Dedicated">Internet Dedicated</option>
           <option value="IP CCTV">IP CCTV</option>

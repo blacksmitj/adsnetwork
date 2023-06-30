@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import MenuItem from "./MenuItem";
 
@@ -13,6 +13,10 @@ const UserMenu = () => {
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [router]);
 
   return (
     <>
@@ -69,12 +73,18 @@ const UserMenu = () => {
             <MenuItem
               onClick={() => router.push("/services")}
               label="PRODUK & LAYANAN"
+              active={pathname === "/services"}
             />
             <MenuItem
               onClick={() => router.push("/partners")}
               label="PARTNER & CLIENT"
+              active={pathname === "/partners"}
             />
-            <MenuItem onClick={() => router.push("/contact")} label="KONTAK" />
+            <MenuItem
+              onClick={() => router.push("/contact")}
+              label="KONTAK"
+              active={pathname === "/contact"}
+            />
           </div>
         </div>
         {/* )} */}

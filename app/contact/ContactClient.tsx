@@ -13,8 +13,10 @@ import { AiOutlineMail } from "react-icons/ai";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import Select from "../components/inputs/Select";
+import useOpenToast from "../hooks/useOpenToast";
 
 const ContactClient = () => {
+  const openToast = useOpenToast();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -41,8 +43,17 @@ const ContactClient = () => {
       .then(() => {
         router.refresh();
         reset();
+        openToast.setTitle("Pesan Terkirim");
+        openToast.setSubTitle(
+          "Pesan telah anda terkirim tunggu kami untuk membalas ke kontak anda!"
+        );
+        openToast.onOpen();
       })
-      .catch((error) => {})
+      .catch((error) => {
+        openToast.setTitle("Terjadi Error");
+        openToast.setSubTitle(error);
+        openToast.onOpen();
+      })
       .finally(() => {
         setIsLoading(false);
       });
@@ -122,7 +133,11 @@ const ContactClient = () => {
                   placeholder="Pesan yang ingin anda sampaikan"
                 />
               </div>
-              <Button onClick={handleSubmit(onSubmit)} label="Kirim Pesan" />
+              <Button
+                onClick={handleSubmit(onSubmit)}
+                disabled={isLoading}
+                label="Kirim Pesan"
+              />
             </div>
             <div className="flex-auto flex flex-col text-neutral-600 gap-3">
               <h1 className="font-semibold text-lg mb-4">
