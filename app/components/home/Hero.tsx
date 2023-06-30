@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Button from "../Button";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
+  const onSubmit = () => {
+    window.open("https://wa.me/" + process.env.NEXT_PUBLIC_WA, "_blank");
+  };
   return (
     <div className="bg-gradient-to-tr from-biru to-pink h-fit">
       <div className="flex lg:flex-row flex-col-reverse lg:items-center h-full md:px-16 px-8 max-w-[1200px] mx-auto pb-24 md:pt-40 pt-24 gap-8">
@@ -14,13 +21,14 @@ const Hero = () => {
             personel yang berpengalaman dengan beragam pilihan paket serta
             layanan yang dapat memberikan kemudahan untuk Anda.
           </p>
-          <Button label="Hubungi Kami" />
+          <Button onClick={onSubmit} label="Hubungi Kami" />
         </div>
         <div className="flex">
           <Image
-            alt="Logo"
+            alt="Hero"
             height={570}
             width={423}
+            style={{ height: "auto" }}
             className="min-w-[300ox] max-w-[600px] object-cover animate-wiggle -ml-4"
             src="/images/people-01.png"
           />

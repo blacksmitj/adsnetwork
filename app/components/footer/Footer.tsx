@@ -1,6 +1,7 @@
+"use client";
+
 import Image from "next/image";
 import Container from "../Container";
-import Logo from "../navbar/Logo";
 
 const Footer = () => {
   return (
@@ -13,6 +14,7 @@ const Footer = () => {
               className="block"
               height="80"
               width="160"
+              style={{ height: "auto" }}
               src="/images/ads-logo.png"
             />
             <p className="text-hitam leading-relaxed md:text-base text-sm font-light">

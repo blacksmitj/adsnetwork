@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const PartnerClient = () => {
@@ -14,6 +16,7 @@ const PartnerClient = () => {
           alt="person-02"
           height={100}
           width={150}
+          style={{ height: "auto" }}
           className="object-contain grayscale opacity-60"
           src="/images/company-01.png"
         />
@@ -21,6 +24,7 @@ const PartnerClient = () => {
           alt="person-02"
           height={100}
           width={150}
+          style={{ height: "auto" }}
           className="object-contain grayscale opacity-60"
           src="/images/company-02.png"
         />
@@ -28,6 +32,7 @@ const PartnerClient = () => {
           alt="person-03"
           height={100}
           width={150}
+          style={{ height: "auto" }}
           className="object-contain grayscale opacity-60"
           src="/images/company-03.png"
         />
@@ -35,6 +40,7 @@ const PartnerClient = () => {
           alt="person-04"
           height={100}
           width={150}
+          style={{ height: "auto" }}
           className="object-contain grayscale opacity-60"
           src="/images/company-04.png"
         />

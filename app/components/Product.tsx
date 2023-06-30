@@ -1,3 +1,5 @@
+"use client";
+
 import { BsCheck2Square } from "react-icons/bs";
 import Button from "./Button";
 import Image from "next/image";
@@ -17,6 +19,9 @@ const Product: React.FC<ProductProps> = ({
   speed,
   points,
 }) => {
+  const onSubmit = () => {
+    window.open("https://wa.me/" + process.env.NEXT_PUBLIC_WA, "_blank");
+  };
   return (
     <div
       className={`flex flex-col relative bg-white min-w-[320px] shadow-2xl shadow-oren/20 rounded-xl overflow-hidden mb-12 snap-center
@@ -52,6 +57,7 @@ const Product: React.FC<ProductProps> = ({
           width={320}
           src={`/images/foto${title}.png`}
           alt={title}
+          style={{ height: "auto" }}
           className="bg-cover"
         />
       </div>
@@ -76,7 +82,12 @@ const Product: React.FC<ProductProps> = ({
         >
           {price} <span className="text-xs font-normal">/bulan</span>
         </p>
-        <Button label="Pilih Produk" full outline={!featured} />
+        <Button
+          label="Pilih Produk"
+          onClick={onSubmit}
+          full
+          outline={!featured}
+        />
       </div>
     </div>
   );

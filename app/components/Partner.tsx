@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 interface PartnerProps {
@@ -15,6 +17,7 @@ const Partner: React.FC<PartnerProps> = ({ title, url, description }) => {
           src={`/images/${url}`}
           width={250}
           height={130}
+          style={{ height: "auto" }}
           className="grayscale-[30%]"
         />
       </div>

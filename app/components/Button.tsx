@@ -1,3 +1,5 @@
+"use client";
+
 import { BeatLoader } from "react-spinners";
 
 interface ButtonProps {

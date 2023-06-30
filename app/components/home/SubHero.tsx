@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Heading from "../Heading";
@@ -12,6 +14,7 @@ const SubHero = () => {
             alt="person-02"
             height={507}
             width={266}
+            style={{ height: "auto" }}
             className="object-contain md:w-[266px] w-[160px] z-[3]"
             src="/images/people-02.png"
           />

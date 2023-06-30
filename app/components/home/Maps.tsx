@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const Maps = () => {
@@ -8,6 +10,7 @@ const Maps = () => {
           <Image
             width={628}
             height={397}
+            style={{ height: "auto" }}
             src={"/images/map.png"}
             alt="map"
             className="bg-cover"

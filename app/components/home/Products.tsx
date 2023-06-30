@@ -1,3 +1,4 @@
+"use client";
 import Product from "../Product";
 
 const Products = () => {

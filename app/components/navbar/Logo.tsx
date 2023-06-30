@@ -11,8 +11,8 @@ const Logo = () => {
       onClick={() => router.push("/")}
       alt="Logo"
       className="block cursor-pointer"
-      height="40"
-      width="80"
+      height={30}
+      width={80}
       src="/images/ads-logo.png"
     />
   );
