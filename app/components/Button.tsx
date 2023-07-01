@@ -8,6 +8,7 @@ interface ButtonProps {
   full?: boolean;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
+  white?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   full,
   onClick,
   disabled,
+  white,
 }) => {
   return (
     <button
@@ -27,6 +29,11 @@ const Button: React.FC<ButtonProps> = ({
         outline
           ? "border-[2px] border-oren text-oren bg-oren/10 hover:bg-oren hover:text-white "
           : "bg-gradient-to-tr from-pink to-oren text-white hover:bg-gradient-to-tr hover:from-oren hover:to-oren transition-all"
+      }
+      ${
+        white
+          ? "border-[2px] border-white text-white bg-white/10 hover:bg-white hover:text-white "
+          : ""
       }
       `}
     >

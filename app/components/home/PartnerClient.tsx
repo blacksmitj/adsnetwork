@@ -17,7 +17,7 @@ const PartnerClient = () => {
           height={100}
           width={150}
           style={{ height: "auto" }}
-          className="object-contain grayscale opacity-60"
+          className="object-contain opacity-80"
           src="/images/company-01.png"
         />
         <Image
@@ -25,7 +25,7 @@ const PartnerClient = () => {
           height={100}
           width={150}
           style={{ height: "auto" }}
-          className="object-contain grayscale opacity-60"
+          className="object-contain opacity-80"
           src="/images/company-02.png"
         />
         <Image
@@ -33,7 +33,7 @@ const PartnerClient = () => {
           height={100}
           width={150}
           style={{ height: "auto" }}
-          className="object-contain grayscale opacity-60"
+          className="object-contain opacity-80"
           src="/images/company-03.png"
         />
         <Image
@@ -41,7 +41,7 @@ const PartnerClient = () => {
           height={100}
           width={150}
           style={{ height: "auto" }}
-          className="object-contain grayscale opacity-60"
+          className="object-contain opacity-80"
           src="/images/company-04.png"
         />
       </div>

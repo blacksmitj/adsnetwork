@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import Button from "../Button";
-import { useRouter } from "next/navigation";
 
 const Hero = () => {
-  const router = useRouter();
   const onSubmit = () => {
     window.open("https://wa.me/" + process.env.NEXT_PUBLIC_WA, "_blank");
   };

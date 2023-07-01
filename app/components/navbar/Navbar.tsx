@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "../Button";
 import Container from "../Container";
 import Logo from "./Logo";
 import UserMenu from "./UserMenu";
@@ -23,6 +24,10 @@ const Navbar = () => {
     }
   }, [isChange]);
 
+  const onSubmit = () => {
+    window.open("https://wa.me/" + process.env.NEXT_PUBLIC_WA, "_blank");
+  };
+
   return (
     <div
       className={`w-full z-10 top-0 fixed backdrop-blur-lg border-b-[1px] border-white/10 transition-colors duration-300
@@ -34,6 +39,14 @@ const Navbar = () => {
           <div className="flex flex-row items-center md:justify-start justify-between gap-3 md:gap-8">
             <Logo />
             <UserMenu />
+            <div className="flex-1 hidden lg:flex items-end justify-end">
+              <Button
+                onClick={onSubmit}
+                label="Hubungi Sekarang"
+                outline
+                white
+              />
+            </div>
           </div>
         </Container>
       </div>
