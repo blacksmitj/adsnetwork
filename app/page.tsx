@@ -1,9 +1,13 @@
-import Container from "./components/Container";
 import Products from "./components/home/Products";
 import Hero from "./components/home/Hero";
 import SubHero from "./components/home/SubHero";
 import PartnerClient from "./components/home/PartnerClient";
 import Maps from "./components/home/Maps";
+
+export const metadata = {
+  title: "ADS Network",
+  description: "INTERNET FOR BETTER LIFE",
+};
 
 export default function Home() {
   return (
